@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+    <style>
+        .container {
+           /* background-color: aliceblue; */
+           font-family: 'Courier New', Courier, monospace;
+           font-size: medium;
+
+        }
+        /* .img1 { 
+            float: right;
+          height: 200px;
+          width: 200px;
+          margin: 50px;
+        /* } */
+        .img1 {
+  float: right;
+  margin: 10px;
+    width: 300px;
+    height: 200px;
+}
+        .img2 {
+        float: left;
+    margin: 10px;
+    height: 300px;
+    width: 400px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+  <img class="img1" src="https://picsum.photos/id/1011/800/500" alt="Travel">
+  <p>
+    This is some text that wraps around the image. Float makes the image stick to one side,
+    while the text flows besidebr it. This is useful for creating layouts where images and text
+    need to be displayed together in a visually appealing way. You can adjust the size of thebr <br>
+    image and the amount of text to see how the float behavior changes. Float can be used for
+    various design purposes, such as creating sidebars, aligning images with text, and more.
+  </p>
+</div>
+<article class="card">
+       <img src="https://picsum.photos/id/1015/800/500" class="img2"  alt="Mountains" loading="lazy">
+        <p>The float property in CSS allows you to take an element out of the normal document flow and position it to the left or right of its container. This enables surrounding content, such as text, to wrap around the floated element, creating a more dynamic layout. The float property can take the following values:
+left: The element floats to the left of its container, allowing content to flow around its right side.
+right: The element floats to the right of its container, allowing content to flow around its left side.
+none: The default value; the element does not float and will be displayed just where it occurs in the text.
+inherit: The element inherits the float value from its parent element.</p>
+</article>
+</body>
+</html>
