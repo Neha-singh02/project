@@ -1,0 +1,28 @@
+/* Navbar using Flexbox */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* spread items */
+  align-items: center;
+  padding: 10px;
+  background: lightblue;
+}
+
+/* Card Container */
+.container {
+  display: flex;
+  justify-content: space-around; /* try space-between, center */
+  align-items: stretch;           /* try center, flex-start */
+  gap: 10px;
+  padding: 20px;
+  background: #f9f9f9;
+}
+
+/* Card Style */
+.card {
+  flex: 1;                /* makes all cards equal width */
+  min-width: 150px;       /* prevents shrinking too small */
+  padding: 20px;
+  border: 1px solid #333;
+  background: white;
+  text-align: center;
+}

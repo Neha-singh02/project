@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Percent vs VH Example</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%; /* needed for % height to work */
+    
+    }
+
+    .container {
+      display: flex;
+      height:100vh; /* full screen height */
+      
+    }
+
+    .box {
+      flex: 1;
+      text-align: center;
+      color: white;
+      font-size: 20px;
+      padding-top: 20px;
+    }
+
+    .percent-box {
+      background: teal;
+      height: 50%;   /* 50% of parent (container) height */
+    }
+
+    .vh-box {
+      background: purple;
+      height: 50vh;  /* 50% of viewport height */
+    }
+
+    .mixed-box {
+      background: orange;
+      height: 100%;  /* 100% of parent’s height (which is 100vh) */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box percent-box">height: 50%</div>
+    <div class="box vh-box">height: 50vh</div>
+    <div class="box mixed-box">height: 100%</div>
+  </div>
+</body>
+</html>

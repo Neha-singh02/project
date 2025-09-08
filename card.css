@@ -1,0 +1,74 @@
+/* Reset */
+* { 
+    margin: 0; padding: 0; box-sizing: border-box; 
+}
+
+body { 
+    font-family: Arial, sans-serif; 
+    background: #c4b3b3;
+     color: #746f6f; line-height: 1.6;
+ }
+
+/* Page container */
+.container
+ { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem;
+  background-color: #3f51b5;
+  color: whitesmoke;
+ }
+
+/* Header */
+.header {
+     text-align: center; margin-bottom: 2rem;
+     }
+.header-title { 
+    font-size: 2rem; font-weight: 700; 
+}
+.header-desc { margin-top: .5rem; color: #555; }
+
+/* GRID: desktop 4 cols, tablet 2, mobile 1 */
+.blog-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: start;          /* don't stretch rows vertically */
+}
+@media (max-width: 1024px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px)  { .blog-grid { grid-template-columns: 1fr; } }
+
+/* Card */
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.card:hover { transform: translateY(-4px); box-shadow: 0 8px 18px rgba(0,0,0,.12); }
+
+/* Image */
+.card-image img {
+  display: block;
+  width: 100%;
+  height: 180px;       /* constant image height */
+  object-fit: cover;   /* crop instead of distort */
+}
+
+/* Body */
+.card-body { padding: 1rem; flex: 1; display: flex; flex-direction: column; gap: .4rem; }
+.card-title { font-size: 1.15rem; font-weight: 700; color: #222; }
+.card-desc { color: #555; font-size: .95rem; }
+
+/* Footer */
+.card-footer {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: .8rem 1rem; border-top: 1px solid #eee;
+}
+.author { display: flex; align-items: center; gap: .6rem; }
+.author img { width: 34px; height: 34px; border-radius: 50%; }
+.author-name { font-weight: 600; font-size: .9rem; }
+.date { font-size: .8rem; color: #777; }
+.tag { background: #e8eaf6; color: #3f51b5; padding: .3rem .6rem; border-radius: 6px; font-size: .8rem; }

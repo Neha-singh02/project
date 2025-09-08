@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events and Functions</title>
+</head>
+<body>
+    <h2>JavaScript Events and Functions</h2>
+
+   
+   <p id="demo">Click the button to see a message.</p>
+<button onclick="showMessage()">Click Me</button>
+
+<script>
+    function showMessage() {
+        document.getElementById("demo").innerHTML = "Hello! You clicked the button.";
+    }
+</script>
+   <h2>Input Field Event Example</h2>
+
+<input type="text" id="nameInput" placeholder="Enter your name">
+<button onclick="greetUser()">Greet Me</button>
+<p id="greeting"></p>
+
+<script>
+    function greetUser() {
+        const name = document.getElementById("nameInput").value;
+        document.getElementById("greeting").innerHTML = "Hello, " + name + "!";
+    }
+</script>
+
+    <h2>Mouse Event Example</h2>
+    
+    <p id="mouseEvent" onmouseover="changeText()" onmouseout="resetText()">Hover over this text.</p>
+<script>
+    function changeText() {
+        document.getElementById("mouseEvent").innerHTML = "You hovered over me!";
+    }   
+    </script>
+</body>
+</html>
