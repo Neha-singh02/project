@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click event Change Text</title>
+</head>
+<body>
+       <div>
+        <p id="fpara" style="color: brown;">Hi.. How are You doing?</p>
+       </div>
+       <script>
+
+                        let fpara = document.getElementById("fpara");
+                        fpara.addEventListener("click",changeText);
+                        fpara.style.cursor="pointer";
+                        fpara.title="Click to change text";
+                        
+                        fpara.style.fontSize="20px";
+                            fpara.style.fontWeight="bold";
+        function changeText(){
+            fpara.textContent="Hello,I am fine";
+             fpara.style.color = "blue";  // Change color on click
+        }   
+        fpara.addEventListener("click",changeText);
+        
+</script>
+
+           
+      
+       </script>
+</body>
+</html>
