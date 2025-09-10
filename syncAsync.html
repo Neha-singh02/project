@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Synchronous_ascynchronous example in javascript </p>
+    <script>
+     
+        console.log("scynchronous_ example ");
+        //sychronous code execute line by line, user Order
+        console.log("step 1-Start: Order placed");
+       function step2(){
+        console.log("step 2-Processing: Pizza is being prepared");
+       }    
+       
+         step2();
+       console.log("step 3: Pizza is ready");
+         console.log("step 4-End: Pizza delivered");
+         //asynchronous code execute line by line, but not in order
+         console.log("Asynchronous example ");
+            console.log("step 1-Start: Order placed");
+
+              function step2Async(){
+                setTimeout(() => {
+                    console.log("step 2-Processing: Pizza is being prepared");
+                    console.log("step 3: Pizza is ready");
+                    console.log("step 4-End: Pizza delivered");
+                }, 3000); 
+              }    
+              
+                step2Async();
+         
+
+    </script>
+</body>
+</html>
